@@ -1,0 +1,10 @@
+<div class="fixture-container" ng-init="getDortmundFix()">
+  <div class="fixtures" ng-repeat="fixture in fixtures">
+    <h5>Date: {{fixture.date | date}}</h5>
+    <h5 id="resultsOdds">Results</h5>
+    <h5>{{fixture.awayTeamName}} - {{fixture.result.goalsAwayTeam}} <br><br> {{fixture.homeTeamName}} - {{fixture.result.goalsHomeTeam}}</h5>
+    <h5 id="resultsOdds">Odds</h5>
+    <h5>Away Win: {{fixture.odds.awayWin}} <br> Draw: {{fixture.odds.draw}} <br> Home Win: {{fixture.odds.homeWin}}</h5>
+    <h5>{{fixture.status}}</h5>
+  </div>
+</div>

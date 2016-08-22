@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dortmundApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-controller="mainCtrl" ng-init="getDortmund()">
+  <br>
+  <div class="container">
+    <h1>Everton F.C. <br> Supporter App</h1>
+    <img src="{{logo}}" alt="" />
+    <h1>"Nil Satis Nisi Optimum"</h1>
+    <div class="links">
+      <button class="btn btn-primary" ui-sref="fixtures">Fixtures</button>
+    </div>
+    <ui-view></ui-view>
+  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<script src="./js/app.js" charset="utf-8"></script>
+<script src="./js/service/mainServ.js" charset="utf-8"></script>
+<script src="./js/controller/mainCtrl.js" charset="utf-8"></script>
+</body>
+</html>

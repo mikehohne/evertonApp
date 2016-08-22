@@ -1,0 +1,65 @@
+body {
+  background-color: #4169E1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+}
+
+
+.container {
+  text-align: center;
+}
+
+img {
+  height: 20rem;
+  width: 20rem;
+}
+
+h1 {
+  text-shadow: 1px 1px 1px #000;
+}
+
+
+
+
+.fixture-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fixtures {
+  width: 25rem;
+  height: 25rem;
+  border: 4px solid #fff;
+  background-color: #4169E1;
+  color: white;
+  border-radius: 4rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+
+
+#resultsOdds {
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+.btn {
+  background-color: #4169E1;
+  color: #fff;
+  width: 8rem;
+  margin: 1rem;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #4169E1;
+}
+
+.btn:focus {
+  background-color: white;
+  color: #4169E1;
+}
