@@ -23,4 +23,5 @@ angular.module("dortmundApp").service("mainServ", function($http){
       return response.data;
     })
   }
+
 });
