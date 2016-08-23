@@ -6,6 +6,11 @@ angular.module('dortmundApp',['ui.router']).config(function($stateProvider,$urlR
     templateUrl: "./../templates/fixtures.html"
   })
 
+  .state("table", {
+    url:"/table",
+    templateUrl: "./../templates/table.html"
+  })
+
   $urlRouterProvider.otherwise('/')
 
 });

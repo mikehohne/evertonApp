@@ -24,4 +24,14 @@ angular.module("dortmundApp").service("mainServ", function($http){
     })
   }
 
+  this.getStandingsServ = function(){
+    return $http({
+      method: 'GET',
+      url: 'http://soccer.sportsopendata.net/v1/leagues/premier-league/seasons/16-17/standings'
+    }).then(function(response){
+      console.log(response);
+      return response.data;
+    })
+  }
+
 });

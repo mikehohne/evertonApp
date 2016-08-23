@@ -5,6 +5,7 @@ angular.module("dortmundApp").controller("mainCtrl", function($scope, mainServ){
   $scope.logo;
   $scope.fixtures;
   $scope.players;
+  $scope.standings;
 
   $scope.getDortmund = function(){
     mainServ.getDortmundServ()
@@ -24,6 +25,15 @@ angular.module("dortmundApp").controller("mainCtrl", function($scope, mainServ){
     })
   }
 
+  $scope.getStandings = function(){
+    mainServ.getStandingsServ()
+    .then(function(response){
+      $scope.standings = response.data.standings;
+      console.log(response.data.standings);
+    })
+  }
+
+  $scope.getStandings()
 
 
 
