@@ -89,4 +89,35 @@ angular.module("dortmundApp").controller("mainCtrl", function($scope, mainServ){
       console.log(response.standing);
     })
   }
+  $scope.getTablesFrance = function(){
+    mainServ.getTablesFranceServ()
+    .then(function(response){
+      $scope.standings = response.standing;
+      $scope.leagueTitle = response.leagueCaption;
+      console.log(response);
+      console.log(response.standing);
+    })
+  }
+
+  $scope.getTablesSpain = function(){
+    mainServ.getTablesSpainServ()
+    .then(function(response){
+      $scope.standings = response.standing;
+      $scope.leagueTitle = response.leagueCaption;
+      console.log(response);
+      console.log(response.standing);
+    })
+  }
+
+  $scope.getTablesItaly = function(){
+    mainServ.getTablesItalyServ()
+    .then(function(response){
+      $scope.standings = response.standing;
+      $scope.leagueTitle = response.leagueCaption;
+      console.log(response);
+      console.log(response.standing);
+    })
+  }
+
+
 });

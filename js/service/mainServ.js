@@ -72,4 +72,44 @@ angular.module("dortmundApp").service("mainServ", function($http){
     })
   }
 
+  this.getTablesFranceServ = function(){
+    return $http({
+      method: 'GET',
+      url: 'http://api.football-data.org/v1/competitions/434/leagueTable',
+      headers: {
+        "x-auth-token": "e7a1e1707d9b46008cadb813fc746221"
+      }
+    }).then(function(response){
+      console.log(response);
+      return response.data;
+    })
+  }
+
+  this.getTablesSpainServ = function(){
+    return $http({
+      method: 'GET',
+      url: ' http://api.football-data.org/v1/competitions/436/leagueTable',
+      headers: {
+        "x-auth-token": "e7a1e1707d9b46008cadb813fc746221"
+      }
+    }).then(function(response){
+      console.log(response);
+      return response.data;
+    })
+  }
+
+  this.getTablesItalyServ = function(){
+    return $http({
+      method: 'GET',
+      url: ' http://api.football-data.org/v1/competitions/438/leagueTable',
+      headers: {
+        "x-auth-token": "e7a1e1707d9b46008cadb813fc746221"
+      }
+    }).then(function(response){
+      console.log(response);
+      return response.data;
+    })
+  }
+
+
 });
