@@ -1,5 +1,5 @@
 <div class="fixture-container">
-  <div class="fixtures" ng-repeat="fixture in fixtures">
+  <div class="fixtures" ng-class="{'done': fixture.status === finished, 'done1': fixture.status === fullTime}" ng-repeat="fixture in fixtures">
     <h5>Date: {{fixture.date | date}}</h5>
     <h5 id="resultsOdds">Results</h5>
     <h5>{{fixture.awayTeamName}} - {{fixture.result.goalsAwayTeam}} <br><br> {{fixture.homeTeamName}} - {{fixture.result.goalsHomeTeam}}</h5>

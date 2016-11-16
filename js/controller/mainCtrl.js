@@ -12,6 +12,12 @@ angular.module("dortmundApp").controller("mainCtrl", function($scope, mainServ){
   $scope.showClubInfo = true;
   $scope.title = true;
   $scope.league;
+  $scope.complete = 'done';
+  $scope.finished = 'FINISHED';
+  $scope.fullTime = 'FT';
+  $scope.leagueTitle;
+
+  $scope.tableImage = [];
 
 
   $scope.getDortmundNum = function(num){
@@ -60,9 +66,27 @@ angular.module("dortmundApp").controller("mainCtrl", function($scope, mainServ){
   $scope.getPlayers = function(num){
     mainServ.getPlayersServ(num)
     .then(function(response){
-      console.log(response);
       $scope.players = response.players;
-      console.log(response.players);
+    })
+  }
+
+  $scope.getTables = function(){
+    mainServ.getTablesServ()
+    .then(function(response){
+      $scope.standings = response.standing;
+      $scope.leagueTitle = response.leagueCaption;
+      console.log(response);
+      console.log(response.standing);
+    })
+  }
+
+  $scope.getTablesEngland = function(){
+    mainServ.getTablesEnglandServ()
+    .then(function(response){
+      $scope.standings = response.standing;
+      $scope.leagueTitle = response.leagueCaption;
+      console.log(response);
+      console.log(response.standing);
     })
   }
 });
