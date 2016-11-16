@@ -7,18 +7,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body ng-controller="mainCtrl" ng-init="getDortmund()">
+<body ng-controller="mainCtrl">
   <br>
-  <div class="container">
-    <h1>Everton F.C.</h1>
-    <img src="{{logo}}" alt="" />
-    <h1>"Nil Satis Nisi Optimum"</h1>
-    <div class="links">
-      <button class="btn btn-primary" ui-sref="fixtures">Fixtures</button>
-      <button class="btn btn-primary" ui-sref="table">Table</button>
-    </div>
-    <ui-view></ui-view>
+  <div class="links" ng-show="title">
+    <h1>The Soccer DB</h1>
+    <h1>Search For Your Club</h1>
   </div>
+
+  <div class="container" ng-hide=showClubInfo>
+    <h1 class="clubInfo">{{ name }}</h1>
+    <img src="{{logo}}" alt="" />
+    <h2 class="clubInfo"> Country: {{ league }}</h2>
+    <h2 class="clubInfo"> Club Value: {{ value }}</h2>
+    <button class="btn btn-primary" ui-sref="players" ng-click="getPlayers(newTeam)">Players</button>
+  </div>
+  <div class="links">
+    <button class="btn btn-primary" ui-sref="fixtures">Fixtures</button>
+    <button class="btn btn-primary" ui-sref="table" ng-click="getStandingsLeague()">Table</button>
+    <input id="newTeam" type="text" name="name" value="" placeholder="Enter Team" ng-model="newTeam">
+    <button class="btn btn-primary" ui-sref="fixtures" ng-click="getDortmundNum(newTeam);getDortmundFixNum(newTeam)">Go</button>
+  </div>
+  <hr>
+  <ui-view></ui-view>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>

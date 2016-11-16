@@ -1,0 +1,12 @@
+<div class="players-container">
+<div class="" ng-repeat="player in players" ng-controller="mainCtrl">
+  <div class="players">
+    <h3> {{player.name}}<br><cite>#{{player.jerseyNumber}}</cite></h3>
+    <h3>{{player.nationality}}</h3>
+    <h3>{{player.position}}</h3>
+    <h3 id="playersInfo">DOB</h3>
+    <h4>{{player.dateOfBirth | date}}</h4>
+    <h3>Contracted till:<br>{{player.contractUntil}}</h3>
+  </div>
+</div>
+</div>

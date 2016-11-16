@@ -1,5 +1,5 @@
 body {
-  background-color: #4169E1;
+  background-color: #f5fffa;
   background-repeat: no-repeat;
   background-size: contain;
   color: white;
@@ -14,15 +14,36 @@ body {
 img {
   height: 20rem;
   width: 20rem;
+  margin-bottom: 2rem;
 }
 
-h1 {
-  text-shadow: 1px 1px 1px #000;
+h1, h2 {
+  text-shadow: 2px 2px 2px #000;
+}
+
+
+.links {
+  text-align: center;
+}
+
+h4 {
+  color: black;
 }
 
 
 .table-container {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-right: 33%;
+  margin-left: 33%;
+  border-bottom: 1px dotted white;
   text-align: justify;
+}
+
+.tableKey-container {
+  display: flex;
+  justify-content: center;
 }
 
 .fixture-container {
@@ -31,26 +52,50 @@ h1 {
   flex-wrap: wrap;
 }
 
+.players-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+
 .fixtures {
   width: 25rem;
   height: 25rem;
   border: 4px solid #fff;
-  background-color: #4169E1;
-  color: white;
+  background-color: #eed5b7;
+  color: #000;
   border-radius: 4rem;
   margin: 1rem;
   text-align: center;
+  box-shadow: 2px 2px 2px black;
 }
 
+.players {
+  width: 25rem;
+  height: auto;
+  border: 4px solid #fff;
+  background-color: #eed5b7;
+  color: #000;
+  border-radius: 4rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 2px black;
+}
 
+#newTeam {
+  color: black;
+  height: 3.25rem;
+}
 
 #resultsOdds {
-  text-decoration: underline;
   font-size: 2rem;
 }
 
 .btn {
-  background-color: #4169E1;
+  background-color: #000;
   color: #fff;
   width: 8rem;
   margin: 1rem;
@@ -65,4 +110,22 @@ h1 {
 .btn:focus {
   background-color: white;
   color: #4169E1;
+}
+
+.standingBtn {
+  background-color: #F0FFFF;
+  color: black;
+  width: 20rem;
+  height: 10rem;
+  border: .5px dotted black;
+}
+
+.standingBtn:active {
+  background-color: red;
+  color: white;
+}
+
+.standingBtn:focus {
+  background-color: red;
+  color: white;
 }

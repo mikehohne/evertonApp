@@ -1,3 +1,15 @@
+
+<div class="links">
+  <button class="standingBtn" type="button" name="button" ng-click="getStandingsLeague(england)">England</button>
+  <button class="standingBtn" type="button" name="button" ng-click="getStandingsLeague(italy)">Italy</button>
+  <div class="tableKey-container" ng-controller="mainCtrl">
+    <h4>Position</h4>
+    <h4>-Team</h4>
+    <h4>-Points</h4>
+    <h4>-Goal Differential</h4>
+  </div>
+</div>
+<hr>
 <div class="table-container" ng-repeat="standing in standings">
-  <h4>{{standing.position}} - {{standing.team}} - {{standing.overall.points}}<cite> pts</cite></h4>
+  <h4 id="standingStats">{{standing.position}} ---- {{standing.team}} ---- {{standing.overall.points}} - {{standing.overall.goal_difference}} </h4>
 </div>
